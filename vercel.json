@@ -1,5 +1,15 @@
 {
+  "version": 2,
+  "builds": [
+    {
+      "src": "./server.js",
+      "use": "@vercel/node@2.5.10"
+    }
+  ],
   "routes": [
-    { "src": "/api/followers/:uid", "dest": "/api/followers.js" }
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
   ]
 }
